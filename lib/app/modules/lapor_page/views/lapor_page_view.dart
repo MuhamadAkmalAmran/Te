@@ -58,6 +58,7 @@ class LaporPageView extends GetView<LaporPageController> {
       child: Stack(
         children: [
           Positioned(child: _forgroundImageWidget()),
+          _textContainer()
         ],
       ),
     );
@@ -68,6 +69,8 @@ class LaporPageView extends GetView<LaporPageController> {
       fit: BoxFit.contain,
     );
   }
-
+  
+  Widget _textContainer() {
+    return Container();}
 }
 
