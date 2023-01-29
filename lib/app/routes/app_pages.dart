@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/bottom_navigation/bindings/bottom_navigation_binding.dart';
 import '../modules/bottom_navigation/views/bottom_navigation_view.dart';
+import '../modules/form_page/bindings/form_page_binding.dart';
+import '../modules/form_page/views/form_page_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/lapor_page/bindings/lapor_page_binding.dart';
@@ -12,7 +14,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.BOTTOM_NAVIGATION;
 
   static final routes = [
     GetPage(
@@ -29,6 +31,11 @@ class AppPages {
       name: _Paths.LAPOR_PAGE,
       page: () => const LaporPageView(),
       binding: LaporPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORM_PAGE,
+      page: () => const FormPageView(),
+      binding: FormPageBinding(),
     ),
   ];
 }
