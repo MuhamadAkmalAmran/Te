@@ -9,14 +9,9 @@ class LaporPageView extends GetView<LaporPageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('LaporPageView'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'LaporPageView is working',
-          style: TextStyle(fontSize: 20),
+      body: Container(
+        decoration: BoxDecoration(
+          
         ),
       ),
     );
