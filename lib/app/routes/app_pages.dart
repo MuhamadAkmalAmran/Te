@@ -4,6 +4,8 @@ import '../modules/bottom_navigation/bindings/bottom_navigation_binding.dart';
 import '../modules/bottom_navigation/views/bottom_navigation_view.dart';
 import '../modules/form_page/bindings/form_page_binding.dart';
 import '../modules/form_page/views/form_page_view.dart';
+import '../modules/hasil_lapor_page/bindings/hasil_lapor_page_binding.dart';
+import '../modules/hasil_lapor_page/views/hasil_lapor_page_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/lapor_page/bindings/lapor_page_binding.dart';
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.FORM_PAGE,
       page: () => const FormPageView(),
       binding: FormPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.HASIL_LAPOR_PAGE,
+      page: () => const HasilLaporPageView(),
+      binding: HasilLaporPageBinding(),
     ),
   ];
 }
