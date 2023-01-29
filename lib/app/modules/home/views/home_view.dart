@@ -1,3 +1,4 @@
+import 'package:final_project_2023/app/data/warna.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -9,14 +10,15 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('HomeView'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
+      backgroundColor: gradientEndColor,
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [gradientStartColor, gradientEndColor],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            stops: [0.3, 0.7],
+          ),
         ),
       ),
     );
