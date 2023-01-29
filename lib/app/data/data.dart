@@ -24,3 +24,8 @@ List<SeputarInfo> info = [
       description:
           "klasifikasi sampah yang lain, yakni sampah dari Bahan Berbahaya dan Beracun (B3). Jenis sampah B3 diantaranya cairan pembersih kaca/jendela, pembersih lantai, pengkilap kayu, pengharum ruangan, pemutih pakaian, deterjen pakaian, pembasmi serangga, batu baterai, dan lain-lain. B3 merupakan sampah yang mengandung zat beracun, oleh karena itu sampah jenis ini sangat berbahaya dan secara langsung maupun tidak dapat merusak kesehatan dan lingkungan.",),
 ];
+
+class AppAssets {
+  static final String background = "assets/bg.png";
+  static final String forground = "assets/forground.png";
+}
