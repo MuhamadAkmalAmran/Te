@@ -19,33 +19,33 @@ class BottomNavigationView extends GetView<BottomNavigationController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: IndexedStack(
-        index: bottomNavigationController.selectedIndex.value,
-        children: screens,
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.shifting,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white38,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        onTap: (index) {
-          bottomNavigationController.changeIndex(index);
-        },
-        currentIndex: bottomNavigationController.selectedIndex.value,
-        items: [
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-            backgroundColor: Color(0xFF9354B9),
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.report),
-            label: "Lapor",
-            backgroundColor: Color.fromARGB(255, 20, 162, 101),
-          ),
-        ],
-      ),
+      body: Obx(() => IndexedStack(
+            index: bottomNavigationController.selectedIndex.value,
+            children: screens,
+          )),
+      bottomNavigationBar: Obx(() => BottomNavigationBar(
+            type: BottomNavigationBarType.shifting,
+            selectedItemColor: Colors.white,
+            unselectedItemColor: Colors.white38,
+            showSelectedLabels: true,
+            showUnselectedLabels: true,
+            onTap: (index) {
+              bottomNavigationController.changeIndex(index);
+            },
+            currentIndex: bottomNavigationController.selectedIndex.value,
+            items: [
+              const BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: "Home",
+                backgroundColor: Color(0xFF9354B9),
+              ),
+              const BottomNavigationBarItem(
+                icon: Icon(Icons.report),
+                label: "Lapor",
+                backgroundColor: Color.fromARGB(255, 20, 162, 101),
+              ),
+            ],
+          )),
     );
   }
 }
