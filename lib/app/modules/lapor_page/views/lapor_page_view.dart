@@ -24,7 +24,7 @@ class LaporPageView extends GetView<LaporPageController> {
             ).image,
           ),
         ),
-                child: Container(
+        child: Container(
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.4),
             boxShadow: [
@@ -53,7 +53,8 @@ class LaporPageView extends GetView<LaporPageController> {
       ),
     );
   }
- Widget _bodyWidget() {
+
+  Widget _bodyWidget() {
     return Container(
       child: Stack(
         children: [
@@ -63,14 +64,45 @@ class LaporPageView extends GetView<LaporPageController> {
       ),
     );
   }
+
   Widget _forgroundImageWidget() {
     return Image.asset(
       AppAssets.forground,
       fit: BoxFit.contain,
     );
   }
-  
-  Widget _textContainer() {
-    return Container();}
-}
 
+  Widget _textContainer() {
+    return Container(
+      margin: EdgeInsets.symmetric(
+        horizontal: 40,
+      ).copyWith(top: 100),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          RichText(
+            text: TextSpan(
+              style: TextStyle(
+                fontSize: 60,
+                fontWeight: FontWeight.bold,
+              ),
+              children: [
+                TextSpan(text: "Ayo"),
+                TextSpan(
+                  text: " Laporkan\nTumpukan Sampah",
+                  style: TextStyle(color: AppColors.primary),
+                ),
+                TextSpan(text: " Di"),
+                TextSpan(
+                  text: " Kota",
+                  style: TextStyle(color: AppColors.primary),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
