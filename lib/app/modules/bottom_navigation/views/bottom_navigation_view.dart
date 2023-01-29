@@ -34,7 +34,16 @@ class BottomNavigationView extends GetView<BottomNavigationController> {
         },
         currentIndex: bottomNavigationController.selectedIndex.value,
         items: [
-          
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+            backgroundColor: Color(0xFF9354B9),
+          ),
+          const BottomNavigationBarItem(
+            icon: Icon(Icons.report),
+            label: "Lapor",
+            backgroundColor: Color.fromARGB(255, 20, 162, 101),
+          ),
         ],
       ),
     );
