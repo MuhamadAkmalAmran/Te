@@ -1,23 +1,29 @@
 import 'package:get/get.dart';
 
 class BottomNavigationController extends GetxController {
-  //TODO: Implement BottomNavigationController
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  var selectedIndex = 0.obs;
+
+  void changeIndex(int index){
+    selectedIndex.value = index;
   }
+ //TODO: Implement BottomNavigationController
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
+  // final count = 0.obs;
+  // @override
+  // void onInit() {
+  //   super.onInit();
+  // }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
+  // @override
+  // void onReady() {
+  //   super.onReady();
+  // }
 
-  void increment() => count.value++;
+  // @override
+  // void onClose() {
+  //   super.onClose();
+  // }
+
+  // void increment() => count.value++;
 }
