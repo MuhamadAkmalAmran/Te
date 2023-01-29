@@ -44,7 +44,7 @@ class HomeView extends GetView<HomeController> {
               ),
               Container(
                 height: 600,
-                padding: const EdgeInsets.only(left: 32,top: 50),
+                padding: const EdgeInsets.only(left: 32, top: 50),
                 child: Swiper(
                   itemCount: info.length,
                   itemWidth: MediaQuery.of(context).size.width - 2 * 100,
@@ -54,7 +54,56 @@ class HomeView extends GetView<HomeController> {
                         DotSwiperPaginationBuilder(activeSize: 20, space: 8),
                   ),
                   itemBuilder: (context, index) {
-                   return InkWell(); 
+                    return InkWell(
+                      child: Stack(
+                        children: [
+                          Column(
+                            children: [
+                              SizedBox(
+                                height: 100,
+                              ),
+                              Card(
+                                elevation: 8,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(32),
+                                ),
+                                color: Colors.white,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(32.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      SizedBox(height: 10),
+                                      Text(
+                                        info[index].name,
+                                        style: TextStyle(
+                                          fontFamily: 'Avenir',
+                                          fontSize: 44,
+                                          color: const Color(0xff47455f),
+                                          fontWeight: FontWeight.w900,
+                                        ),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                      Text(
+                                        info[index].description,
+                                        style: TextStyle(
+                                          fontFamily: 'Avenir',
+                                          fontSize: 12,
+                                          color: primaryTextColor,
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    );
                   },
                 ),
               ),
