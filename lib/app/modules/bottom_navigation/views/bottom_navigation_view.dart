@@ -23,6 +23,20 @@ class BottomNavigationView extends GetView<BottomNavigationController> {
         index: bottomNavigationController.selectedIndex.value,
         children: screens,
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.shifting,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white38,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
+        onTap: (index) {
+          bottomNavigationController.changeIndex(index);
+        },
+        currentIndex: bottomNavigationController.selectedIndex.value,
+        items: [
+          
+        ],
+      ),
     );
   }
 }
