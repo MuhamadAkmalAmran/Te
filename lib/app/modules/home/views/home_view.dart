@@ -1,5 +1,7 @@
+import 'package:final_project_2023/app/data/data.dart';
 import 'package:final_project_2023/app/data/warna.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_swiper_null_safety/flutter_swiper_null_safety.dart';
 
 import 'package:get/get.dart';
 
@@ -43,6 +45,18 @@ class HomeView extends GetView<HomeController> {
               Container(
                 height: 600,
                 padding: const EdgeInsets.only(left: 32,top: 50),
+                child: Swiper(
+                  itemCount: info.length,
+                  itemWidth: MediaQuery.of(context).size.width - 2 * 100,
+                  layout: SwiperLayout.STACK,
+                  pagination: SwiperPagination(
+                    builder:
+                        DotSwiperPaginationBuilder(activeSize: 20, space: 8),
+                  ),
+                  itemBuilder: (context, index) {
+                   return InkWell(); 
+                  },
+                ),
               ),
             ],
           ),
