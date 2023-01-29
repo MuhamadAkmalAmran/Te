@@ -15,10 +15,14 @@ class BottomNavigationView extends GetView<BottomNavigationController> {
     const HomeView(),
     const LaporPageView(),
   ];
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: IndexedStack(
+        index: bottomNavigationController.selectedIndex.value,
+        children: screens,
+      ),
     );
   }
 }
