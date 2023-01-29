@@ -95,11 +95,50 @@ class LaporPageView extends GetView<LaporPageController> {
                 ),
                 TextSpan(text: " Di"),
                 TextSpan(
-                  text: " Kota",
+                  text: "Kota",
                   style: TextStyle(color: AppColors.primary),
                 ),
               ],
             ),
+          ),
+          SizedBox(
+            height: 50,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 50,
+              ),
+              SizedBox(
+                height: 50,
+                child: Row(
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Get.toNamed(Routes.FORM_PAGE);
+                      },
+                      child: Text(
+                        "LAPOR SAMPAH",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Get.toNamed(Routes.HASIL_LAPOR_PAGE);
+                        },
+                        child: Text(
+                          "LIHAT LAPORAN",
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),
