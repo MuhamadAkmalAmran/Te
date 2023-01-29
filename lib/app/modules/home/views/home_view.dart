@@ -101,6 +101,20 @@ class HomeView extends GetView<HomeController> {
                               )
                             ],
                           ),
+                          Positioned(
+                            right: 24,
+                            bottom: 200,
+                            child: Text(
+                              info[index].position.toString(),
+                              style: TextStyle(
+                                fontFamily: 'Avenir',
+                                fontSize: 200,
+                                color: primaryTextColor.withOpacity(0.08),
+                                fontWeight: FontWeight.w900,
+                              ),
+                              textAlign: TextAlign.left,
+                            ),
+                          )
                         ],
                       ),
                     );
