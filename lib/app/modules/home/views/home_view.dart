@@ -20,6 +20,29 @@ class HomeView extends GetView<HomeController> {
             stops: [0.3, 0.7],
           ),
         ),
+        child: SafeArea(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Column(
+                  children: [
+                    Text(
+                      "Sekilas Info",
+                      style: TextStyle(
+                        fontFamily: 'Avenir',
+                        fontSize: 44,
+                        color: const Color(0xffffffff),
+                        fontWeight: FontWeight.w900,
+                      ),
+                      textAlign: TextAlign.left,
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
