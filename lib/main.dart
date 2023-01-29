@@ -15,6 +15,7 @@ const MyApp({ Key? key }) : super(key: key);
   @override
   Widget build(BuildContext context){
     return     GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Application",
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
