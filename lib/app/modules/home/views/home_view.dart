@@ -40,6 +40,10 @@ class HomeView extends GetView<HomeController> {
                   ],
                 ),
               ),
+              Container(
+                height: 600,
+                padding: const EdgeInsets.only(left: 32,top: 50),
+              ),
             ],
           ),
         ),
