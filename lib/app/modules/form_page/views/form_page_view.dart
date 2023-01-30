@@ -13,10 +13,14 @@ class FormPageView extends GetView<FormPageController> {
         title: const Text('Form Laporan Tumpukan sampah'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text(
-          'FormPageView is working',
-          style: TextStyle(fontSize: 20),
+      body: Form(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextFormField(),
+            )
+          ],
         ),
       ),
     );
