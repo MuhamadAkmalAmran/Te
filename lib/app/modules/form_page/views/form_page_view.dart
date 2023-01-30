@@ -90,7 +90,10 @@ class FormPageView extends GetView<FormPageController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    await controller.savedata(controller.namaC.text,
+                        controller.descC.text, controller.lokasiC.text);
+                  },
                   child: const Text("save"),
                 )
               ],
