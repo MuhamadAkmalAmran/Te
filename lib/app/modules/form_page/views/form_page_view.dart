@@ -10,7 +10,7 @@ class FormPageView extends GetView<FormPageController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('FormPageView'),
+        title: const Text('Form Laporan Tumpukan sampah'),
         centerTitle: true,
       ),
       body: Center(
