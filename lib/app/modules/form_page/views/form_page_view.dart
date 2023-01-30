@@ -28,14 +28,26 @@ class FormPageView extends GetView<FormPageController> {
                   hintText: 'Isi Namamu',
                   border: OutlineInputBorder(),
                 ),
-                onSaved: (newValue) {
-                  
-                },
-                validator: (value) {
-                  
-                },
+                onSaved: (newValue) {},
+                validator: (value) {},
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextFormField(
+                style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600),
+                decoration: InputDecoration(
+                  label: const Text('Deskripsi sampah'),
+                  hintText: 'Isi Deskripsi',
+                  border: OutlineInputBorder(),
+                ),
+                onSaved: (newValue) {},
+                validator: (value) {},
+              ),
+            ),
           ],
         ),
       ),
