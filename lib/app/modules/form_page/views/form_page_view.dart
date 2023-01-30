@@ -64,6 +64,15 @@ class FormPageView extends GetView<FormPageController> {
                 validator: (value) {},
               ),
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  child: const Text("save"),
+                )
+              ],
+            ),
           ],
         ),
       ),
