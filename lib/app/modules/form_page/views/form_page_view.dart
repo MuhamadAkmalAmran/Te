@@ -18,7 +18,17 @@ class FormPageView extends GetView<FormPageController> {
           children: [
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: TextFormField(),
+              child: TextFormField(
+                style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600),
+                decoration: InputDecoration(
+                  label: const Text('Nama'),
+                  hintText: 'Isi Namamu',
+                  border: OutlineInputBorder(),
+                ),
+              ),
             )
           ],
         ),
