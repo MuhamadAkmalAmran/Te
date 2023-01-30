@@ -14,6 +14,7 @@ class FormPageView extends GetView<FormPageController> {
         centerTitle: true,
       ),
       body: Form(
+        key: controller.loginFormKey,
         child: Column(
           children: [
             Padding(
