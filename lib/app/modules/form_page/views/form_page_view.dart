@@ -30,8 +30,14 @@ class FormPageView extends GetView<FormPageController> {
                   hintText: 'Isi Namamu',
                   border: OutlineInputBorder(),
                 ),
-                onSaved: (newValue) {},
-                validator: (value) {},
+                onSaved: (newValue) {
+                  if (newValue != null) {
+                    controller.namaC.text = newValue;
+                  }
+                },
+                validator: (value) {
+                  return controller.validateName(value!);
+                },
               ),
             ),
             Padding(
@@ -47,8 +53,14 @@ class FormPageView extends GetView<FormPageController> {
                   hintText: 'Isi Deskripsi',
                   border: OutlineInputBorder(),
                 ),
-                onSaved: (newValue) {},
-                validator: (value) {},
+                onSaved: (newValue) {
+                  if (newValue != null) {
+                    controller.descC.text = newValue;
+                  }
+                },
+                validator: (value) {
+                  return controller.validatedesc(value!);
+                },
               ),
             ),
             Padding(
@@ -64,8 +76,14 @@ class FormPageView extends GetView<FormPageController> {
                   hintText: 'Isi Lokasi sampah',
                   border: OutlineInputBorder(),
                 ),
-                onSaved: (newValue) {},
-                validator: (value) {},
+                onSaved: (newValue) {
+                  if (newValue != null) {
+                    controller.lokasiC.text = newValue;
+                  }
+                },
+                validator: (value) {
+                  return controller.validatelokasi(value!);
+                },
               ),
             ),
             Row(
