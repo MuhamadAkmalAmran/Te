@@ -28,6 +28,12 @@ class FormPageView extends GetView<FormPageController> {
                   hintText: 'Isi Namamu',
                   border: OutlineInputBorder(),
                 ),
+                onSaved: (newValue) {
+                  
+                },
+                validator: (value) {
+                  
+                },
               ),
             )
           ],
