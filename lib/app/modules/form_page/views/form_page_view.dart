@@ -20,6 +20,7 @@ class FormPageView extends GetView<FormPageController> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
+                controller: controller.namaC,
                 style: TextStyle(
                     fontSize: 16.0,
                     color: Colors.black,
@@ -36,6 +37,7 @@ class FormPageView extends GetView<FormPageController> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
+                controller: controller.descC,
                 style: TextStyle(
                     fontSize: 16.0,
                     color: Colors.black,
@@ -52,6 +54,7 @@ class FormPageView extends GetView<FormPageController> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
+                controller: controller.lokasiC,
                 style: TextStyle(
                     fontSize: 16.0,
                     color: Colors.black,
