@@ -10,14 +10,42 @@ class HasilLaporPageView extends GetView<HasilLaporPageController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HasilLaporPageView'),
+        title: const Text('Laporan tumpukan sampah'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text(
-          'HasilLaporPageView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: FutureBuilder(
+        future: controller.getReport(),
+        // future: controller.getReport(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            if (snapshot.hasData) {
+              return Column(
+                children: [
+                  ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: snapshot.data!.length,
+                    itemBuilder: (context, index) => Card(
+                      child: ListTile(
+                        title: Text('Nama: ' '${snapshot.data![index].map['nama']}'),
+                        subtitle: Text(
+                              'Deskripsi Sampah : ${snapshot.data![index].map['deskripsi sampah']} \nLokasi : ${snapshot.data![index].map['Lokasi sampah']}'),
+                      ),
+                    ),
+                  )
+                ],
+              );
+            } else if (snapshot.hasError) {
+              return Center(child: Text(snapshot.error.toString()));
+            } else {
+              return const Center(
+                child: Text('No Data'),
+              );
+            }
+          }
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        },
       ),
     );
   }
