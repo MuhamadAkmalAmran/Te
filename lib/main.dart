@@ -4,6 +4,9 @@ import 'package:get/get.dart';
 
 import 'app/routes/app_pages.dart';
 
+const apiKey = "AIzaSyCjlDqahWTLvB6u7P9zhak8yPqkcTpj_ps";
+const projectId ="final-project-2023-5b9d5";
+
 void main() {
   runApp(MyApp()
   );
