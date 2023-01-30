@@ -48,6 +48,22 @@ class FormPageView extends GetView<FormPageController> {
                 validator: (value) {},
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextFormField(
+                style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600),
+                decoration: InputDecoration(
+                  label: const Text('Lokasi'),
+                  hintText: 'Isi Lokasi sampah',
+                  border: OutlineInputBorder(),
+                ),
+                onSaved: (newValue) {},
+                validator: (value) {},
+              ),
+            ),
           ],
         ),
       ),
