@@ -1,3 +1,4 @@
+import 'package:firedart/firedart.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -8,6 +9,7 @@ const apiKey = "AIzaSyCjlDqahWTLvB6u7P9zhak8yPqkcTpj_ps";
 const projectId ="final-project-2023-5b9d5";
 
 void main() {
+    Firestore.initialize(projectId);
   runApp(MyApp()
   );
 }
