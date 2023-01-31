@@ -9,6 +9,7 @@ abstract class Routes {
   static const FORM_PAGE = _Paths.FORM_PAGE;
   static const HASIL_LAPOR_PAGE = _Paths.HASIL_LAPOR_PAGE;
   static const LOGIN_PAGE = _Paths.LOGIN_PAGE;
+  static const REGISTER_PAGE = _Paths.REGISTER_PAGE;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const FORM_PAGE = '/form-page';
   static const HASIL_LAPOR_PAGE = '/hasil-lapor-page';
   static const LOGIN_PAGE = '/login-page';
+  static const REGISTER_PAGE = '/register-page';
 }

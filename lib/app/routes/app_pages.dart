@@ -12,6 +12,8 @@ import '../modules/lapor_page/bindings/lapor_page_binding.dart';
 import '../modules/lapor_page/views/lapor_page_view.dart';
 import '../modules/login_page/bindings/login_page_binding.dart';
 import '../modules/login_page/views/login_page_view.dart';
+import '../modules/register_page/bindings/register_page_binding.dart';
+import '../modules/register_page/views/register_page_view.dart';
 
 part 'app_routes.dart';
 
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.LOGIN_PAGE,
       page: () => LoginPageView(),
       binding: LoginPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.REGISTER_PAGE,
+      page: () => const RegisterPageView(),
+      binding: RegisterPageBinding(),
     ),
   ];
 }
