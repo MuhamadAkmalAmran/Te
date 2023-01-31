@@ -1,16 +1,8 @@
 # final_project_2023
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Project akhir ini merupakan tugas dari matakuliah multiplatform 
+fungsionalitas dan fitur fitur yang ada di project ini yaitu :
+1. login untuk masuk kedalam aplikasi
+2. terdapat sekilas informasi yang nantinya bisa di update pada halaman utama
+3. terdapat halaman untuk lapor tumpukan sampah 
+4. terdapat halaman untuk menampilkan data laporan
