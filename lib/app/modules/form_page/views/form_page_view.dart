@@ -136,9 +136,41 @@ class FormPageView extends GetView<FormPageController> {
                                 },
                               ),
                             ),
+                            SizedBox(height: 30,),
                             Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
+                                GestureDetector(
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    width: 150,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(50),
+                                      gradient: LinearGradient(
+                                        colors: [
+                                          gradientStartColor,
+                                          gradientEndColor
+                                        ],
+                                        begin: Alignment.centerRight,
+                                        end: Alignment.centerLeft,
+                                        stops: [0.3, 0.7],
+                                      ),
+                                    ),
+                                    child: Padding(
+                                      padding: EdgeInsets.all(12.0),
+                                      child: Text(
+                                        "Cancel",
+                                        style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white),
+                                      ),
+                                    ),
+                                  ),
+                                  onTap: () {
+                                    Get.back();
+                                  },
+                                ),
                                 GestureDetector(
                                   child: Container(
                                     alignment: Alignment.center,
