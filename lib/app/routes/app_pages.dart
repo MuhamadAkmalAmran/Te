@@ -10,6 +10,8 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/lapor_page/bindings/lapor_page_binding.dart';
 import '../modules/lapor_page/views/lapor_page_view.dart';
+import '../modules/login_page/bindings/login_page_binding.dart';
+import '../modules/login_page/views/login_page_view.dart';
 
 part 'app_routes.dart';
 
@@ -43,6 +45,11 @@ class AppPages {
       name: _Paths.HASIL_LAPOR_PAGE,
       page: () => const HasilLaporPageView(),
       binding: HasilLaporPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOGIN_PAGE,
+      page: () => const LoginPageView(),
+      binding: LoginPageBinding(),
     ),
   ];
 }
