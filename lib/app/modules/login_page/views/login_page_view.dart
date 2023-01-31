@@ -6,7 +6,9 @@ import 'package:get/get.dart';
 import '../controllers/login_page_controller.dart';
 
 class LoginPageView extends GetView<LoginPageController> {
-  const LoginPageView({Key? key}) : super(key: key);
+  String email = " ";
+  String pass = " ";
+  LoginPageView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,7 +65,9 @@ class LoginPageView extends GetView<LoginPageController> {
                       "Silahkan Login utnuk masuk ke aplikasi",
                       style: TextStyle(fontSize: 15, color: Colors.grey),
                     ),
-                    SizedBox(height: 40,),
+                    SizedBox(
+                      height: 40,
+                    ),
                     Container(
                       width: 400,
                       child: Form(
@@ -82,7 +86,9 @@ class LoginPageView extends GetView<LoginPageController> {
                                   hintText: 'Isi Email',
                                   border: OutlineInputBorder(),
                                 ),
-                                onChanged: (newValue) {},
+                                onChanged: (newValue) {
+                                  email = newValue;
+                                },
                               ),
                             ),
                             Padding(
@@ -99,7 +105,9 @@ class LoginPageView extends GetView<LoginPageController> {
                                   hintText: 'Isi Password',
                                   border: OutlineInputBorder(),
                                 ),
-                                onChanged: (newValue) {},
+                                onChanged: (newValue) {
+                                  pass = newValue;
+                                },
                               ),
                             ),
                             SizedBox(
@@ -135,7 +143,9 @@ class LoginPageView extends GetView<LoginPageController> {
                                       ),
                                     ),
                                   ),
-                                  onTap: () {},
+                                  onTap: () async{
+                                    await controller.signIn(email, pass);
+                                  },
                                 ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
