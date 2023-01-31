@@ -55,7 +55,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.REGISTER_PAGE,
-      page: () => const RegisterPageView(),
+      page: () => RegisterPageView(),
       binding: RegisterPageBinding(),
     ),
   ];

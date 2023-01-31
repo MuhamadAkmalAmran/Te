@@ -6,7 +6,9 @@ import 'package:get/get.dart';
 import '../controllers/register_page_controller.dart';
 
 class RegisterPageView extends GetView<RegisterPageController> {
-  const RegisterPageView({Key? key}) : super(key: key);
+  String email = " ";
+  String pass = " ";
+  RegisterPageView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
