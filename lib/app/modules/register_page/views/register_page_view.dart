@@ -12,7 +12,7 @@ class RegisterPageView extends GetView<RegisterPageController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
@@ -71,6 +71,7 @@ class RegisterPageView extends GetView<RegisterPageController> {
                     Container(
                       width: 400,
                       child: Form(
+                        key: controller.loginFormKey,
                         child: Column(
                           children: [
                             Padding(
@@ -87,6 +88,7 @@ class RegisterPageView extends GetView<RegisterPageController> {
                                   border: OutlineInputBorder(),
                                 ),
                                 onChanged: (newValue) {
+                                  email = newValue;
                                 },
                               ),
                             ),
@@ -105,6 +107,7 @@ class RegisterPageView extends GetView<RegisterPageController> {
                                   border: OutlineInputBorder(),
                                 ),
                                 onChanged: (newValue) {
+                                  pass = newValue;
                                 },
                               ),
                             ),
@@ -142,7 +145,7 @@ class RegisterPageView extends GetView<RegisterPageController> {
                                     ),
                                   ),
                                   onTap: () {
-
+                                    Get.back();
                                   },
                                 ),
                                 GestureDetector(
@@ -172,8 +175,8 @@ class RegisterPageView extends GetView<RegisterPageController> {
                                       ),
                                     ),
                                   ),
-                                  onTap: () {
-
+                                  onTap: () async{
+                                    await controller.signUp(email, pass);
                                   },
                                 ),
                               ],
