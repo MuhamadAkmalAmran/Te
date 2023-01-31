@@ -43,7 +43,7 @@ class HomeView extends GetView<HomeController> {
                 ),
               ),
               Container(
-                height: 600,
+                height: 450,
                 padding: const EdgeInsets.only(left: 32, top: 50),
                 child: Swiper(
                   itemCount: info.length,
@@ -103,7 +103,7 @@ class HomeView extends GetView<HomeController> {
                           ),
                           Positioned(
                             right: 24,
-                            bottom: 200,
+                            bottom: 80,
                             child: Text(
                               info[index].position.toString(),
                               style: TextStyle(
