@@ -1,4 +1,5 @@
 import 'package:final_project_2023/app/data/warna.dart';
+import 'package:final_project_2023/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -152,7 +153,9 @@ class LoginPageView extends GetView<LoginPageController> {
                                   children: [
                                     Text("Belum Punya Akun?"),
                                     TextButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Get.toNamed(Routes.REGISTER_PAGE);
+                                      },
                                       child: Text("Register Sekarang"),
                                     )
                                   ],
