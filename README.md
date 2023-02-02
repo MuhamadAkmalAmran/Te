@@ -7,3 +7,6 @@ fungsionalitas dan fitur fitur yang ada di project ini yaitu :
 2. terdapat sekilas informasi yang nantinya akan di update oleh admin di halaman utama
 3. terdapat halaman untuk lapor tumpukan sampah 
 4. terdapat halaman untuk menampilkan data laporan tumpukan sampah
+
+email : ardian.mulya7@gmail.com
+password : ardianmulya
