@@ -6,12 +6,14 @@ import 'package:get/get.dart';
 
 import '../controllers/login_page_controller.dart';
 
+//widget yang menggambarkan tampilan halaman login
 class LoginPageView extends GetView<LoginPageController> {
   String email = " ";
   String pass = " ";
   LoginPageView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    //Tampilan halaman dibungkus dalam sebuah Scaffold, yang umumnya digunakan dalam aplikasi Flutter untuk menyediakan struktur halaman.
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(

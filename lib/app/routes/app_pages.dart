@@ -17,11 +17,16 @@ import '../modules/register_page/views/register_page_view.dart';
 
 part 'app_routes.dart';
 
+//digunakan untuk mendefinisikan halaman-halaman (routes) dalam aplikasi.
 class AppPages {
   AppPages._();
 
+//Konstanta ini mendefinisikan rute awal aplikasi, yaitu 'LOGIN_PAGE'. Artinya, ketika aplikasi dijalankan, halaman pertama yang akan ditampilkan adalah halaman login.
   static const INITIAL = Routes.LOGIN_PAGE;
 
+//aftar semua rute-rute yang ada dalam aplikasi.
+//Setiap rute memiliki beberapa atribut, seperti 'name' (nama rute), 'page' (halaman yang akan ditampilkan), dan 'binding' (binding class untuk rute tersebut).
+//Rute-rute ini kemudian digunakan oleh GetX untuk menavigasi antar halaman.
   static final routes = [
     GetPage(
       name: _Paths.HOME,

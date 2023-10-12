@@ -8,9 +8,11 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 import 'app/routes/app_pages.dart';
 
+// dua konstanta global (apiKey dan projectId) yang digunakan dalam aplikasi.
 const apiKey = "AIzaSyCjlDqahWTLvB6u7P9zhak8yPqkcTpj_ps";
 const projectId ="final-project-2023-5b9d5";
 
+//Fungsi main adalah titik masuk utama untuk aplikasi Flutter
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -25,6 +27,7 @@ void main() async{
   );
 }
 
+//Kelas ini mewarisi dari StatelessWidget yang sesuai
 class MyApp extends StatelessWidget {
 const MyApp({ Key? key }) : super(key: key);
 

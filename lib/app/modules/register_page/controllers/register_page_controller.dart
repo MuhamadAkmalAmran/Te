@@ -3,10 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class RegisterPageController extends GetxController {
+  //loginFormKey adalah sebuah GlobalKey yang digunakan untuk mengakses dan memanipulasi form dalam aplikasi.
   final GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+  //instance dari Firebase Authentication, yang akan digunakan untuk proses otentikasi pengguna.
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
+//Metode ini mengambil alamat email dan kata sandi, kemudian mencoba melakukan pendaftaran.
     Future signUp(String email, String pass) async {
+    //Jika berhasil, dia menampilkan dialog sukses; 
     try{
     await _firebaseAuth.signUp(email, pass);
     Get.defaultDialog(
@@ -19,6 +23,7 @@ class RegisterPageController extends GetxController {
       textConfirm: "okay",
     );
   }
+  //jika gagal, dia menampilkan pesan kesalahan yang sesuai berdasarkan jenis kesalahan yang terjadi.
   catch (e) {
       if (e.toString() == "AuthException: INVALID_EMAIL") {
         Get.showSnackbar(const GetSnackBar(

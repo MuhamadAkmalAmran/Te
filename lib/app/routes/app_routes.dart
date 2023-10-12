@@ -1,6 +1,8 @@
 part of 'app_pages.dart';
 // DO NOT EDIT. This is code generated via package:get_cli/get_cli.dart
 
+//Ada dua kelas abstrak di dalam kode ini, yaitu Routes dan _Paths.
+//Ini adalah daftar rute dan jalur yang digunakan dalam aplikasi. Variabel konstan statis digunakan untuk mendefinisikan rute-rute tersebut.
 abstract class Routes {
   Routes._();
   static const HOME = _Paths.HOME;

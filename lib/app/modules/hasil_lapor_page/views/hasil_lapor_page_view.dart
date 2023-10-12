@@ -5,11 +5,14 @@ import 'package:get/get.dart';
 
 import '../controllers/hasil_lapor_page_controller.dart';
 
+//class yang meng-extend GetView<HasilLaporPageController>
 class HasilLaporPageView extends GetView<HasilLaporPageController> {
   const HasilLaporPageView({Key? key}) : super(key: key);
   @override
+  //digunakan untuk membangun tampilan widget.
   Widget build(BuildContext context) {
     return Scaffold(
+      // untuk menampilkan judul aplikasi dan digunakan dalam hal ini untuk menampilkan "Laporan tumpukan sampah".
       appBar: AppBar(
         title: const Text('Laporan tumpukan sampah'),
         centerTitle: true,
@@ -27,6 +30,7 @@ class HasilLaporPageView extends GetView<HasilLaporPageController> {
               stops: [0.3, 0.7],
             ),
           ),
+          //digunakan untuk memuat data laporan sampah
           child: FutureBuilder(
             future: controller.getReport(),
             // future: controller.getReport(),
@@ -35,6 +39,7 @@ class HasilLaporPageView extends GetView<HasilLaporPageController> {
                 if (snapshot.hasData) {
                   return Column(
                     children: [
+                      //digunakan untuk menampilkan data laporan sampah dalam daftar dengan elemen-elemen Card
                       ListView.builder(
                         shrinkWrap: true,
                         itemCount: snapshot.data!.length,

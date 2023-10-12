@@ -54,6 +54,7 @@ class LaporPageView extends GetView<LaporPageController> {
     );
   }
 
+//digunakan untuk mengatur tata letak tampilan utama yang terdiri dari gambar depan dan kontainer teks.
   Widget _bodyWidget() {
     return Container(
       child: Stack(
@@ -65,6 +66,7 @@ class LaporPageView extends GetView<LaporPageController> {
     );
   }
 
+//Metode _forgroundImageWidget() mengembalikan gambar depan (foreground image) yang digunakan dalam tampilan.
   Widget _forgroundImageWidget() {
     return Image.asset(
       AppAssets.forground,
@@ -72,6 +74,7 @@ class LaporPageView extends GetView<LaporPageController> {
     );
   }
 
+//Metode _textContainer() mengembalikan kontainer teks yang berisi teks yang akan ditampilkan di layar. Teks ini memiliki variasi gaya dan warna yang membuatnya menonjol.
   Widget _textContainer() {
     return Container(
       margin: EdgeInsets.symmetric(
@@ -81,6 +84,7 @@ class LaporPageView extends GetView<LaporPageController> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
+          //widget untuk menampilkan teks dengan gaya yang berbeda dalam satu elemen teks.
           RichText(
             text: TextSpan(
               style: TextStyle(
@@ -114,6 +118,7 @@ class LaporPageView extends GetView<LaporPageController> {
                 height: 50,
                 child: Row(
                   children: [
+                    //menggunakan ElevatedButton untuk membuat dua tombol dengan teks "LAPOR SAMPAH" dan "LIHAT LAPORAN".
                     ElevatedButton(
                       onPressed: () {
                         Get.toNamed(Routes.FORM_PAGE);

@@ -7,10 +7,12 @@ import 'package:get/get.dart';
 
 import '../controllers/home_controller.dart';
 
+//kelas yang mewarisi GetView<HomeController>, yang menunjukkan bahwa ini adalah tampilan yang terhubung dengan HomeController.
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    //Scaffold adalah struktur dasar yang menyediakan komponen tata letak dasar untuk halaman aplikasi.
     return Scaffold(
       backgroundColor: gradientEndColor,
       body: Container(
@@ -22,6 +24,7 @@ class HomeView extends GetView<HomeController> {
             stops: [0.3, 0.7],
           ),
         ),
+        //digunakan untuk memastikan bahwa konten aplikasi tidak tumpang tindih dengan area yang dilindungi seperti notch atau batas perangkat.
         child: SafeArea(
           child: Column(
             children: [
@@ -42,9 +45,11 @@ class HomeView extends GetView<HomeController> {
                   ],
                 ),
               ),
+              //widget untuk menggulir melalui daftar item dengan tata letak tumpukan (SwiperLayout.STACK).
               Container(
                 height: 450,
                 padding: const EdgeInsets.only(left: 32, top: 50),
+                //Dalam Swiper, item-item diisi dengan informasi yang diambil dari daftar info, dan ditampilkan dalam kartu dengan berbagai properti seperti warna latar belakang, font, dan lainnya.
                 child: Swiper(
                   itemCount: info.length,
                   itemWidth: MediaQuery.of(context).size.width - 2 * 100,
@@ -54,6 +59,7 @@ class HomeView extends GetView<HomeController> {
                         DotSwiperPaginationBuilder(activeSize: 20, space: 8),
                   ),
                   itemBuilder: (context, index) {
+                    //sebagai area yang dapat ditekan oleh pengguna.
                     return InkWell(
                       child: Stack(
                         children: [

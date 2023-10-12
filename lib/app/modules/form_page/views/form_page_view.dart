@@ -5,10 +5,13 @@ import 'package:get/get.dart';
 
 import '../controllers/form_page_controller.dart';
 
+//digunakan untuk membuat tampilan halaman laporan sampah.
 class FormPageView extends GetView<FormPageController> {
   const FormPageView({Key? key}) : super(key: key);
   @override
+  // digunakan untuk membangun tampilan halaman.
   Widget build(BuildContext context) {
+    // digunakan sebagai kerangka utama halaman
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(

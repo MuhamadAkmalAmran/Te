@@ -1,9 +1,12 @@
 import 'package:get/get.dart';
 
+//Penggunaan GetXController adalah pendekatan yang baik untuk mengelola state dalam Flutter.
+//GetX adalah library yang membantu Anda dalam mengelola state dengan mudah.
 class BottomNavigationController extends GetxController {
 
   var selectedIndex = 0.obs;
 
+//metode yang digunakan untuk mengganti nilai selectedIndex
   void changeIndex(int index){
     selectedIndex.value = index;
   }

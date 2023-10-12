@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 
 import '../controllers/register_page_controller.dart';
 
+//kelas yang mendefinisikan tampilan halaman pendaftaran. Ini adalah bagian dari arsitektur GetX, yang digunakan untuk mengatur keadaan aplikasi dan routing.
 class RegisterPageView extends GetView<RegisterPageController> {
   String email = " ";
   String pass = " ";

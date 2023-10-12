@@ -1,3 +1,5 @@
+//digunakan untuk merepresentasikan informasi terkait dengan jenis sampah. 
+//Kelas ini memiliki tiga atribut: position (sebagai identifier), name (nama jenis sampah), dan description (deskripsi jenis sampah).
 class SeputarInfo {
   final int position;
   final String name;
@@ -10,6 +12,8 @@ class SeputarInfo {
   });
 }
 
+//List info berisi instance dari kelas SeputarInfo, yang mewakili informasi terkait dengan berbagai jenis sampah.
+//Setiap elemen dalam daftar ini memiliki identifier (position), nama jenis sampah, dan deskripsi jenis sampah yang dijelaskan secara rinci.
 List<SeputarInfo> info = [
   SeputarInfo(1,
       name: 'Sampah Organik',
@@ -25,6 +29,8 @@ List<SeputarInfo> info = [
           "klasifikasi sampah yang lain, yakni sampah dari Bahan Berbahaya dan Beracun (B3). Jenis sampah B3 diantaranya cairan pembersih kaca/jendela, pembersih lantai, pengkilap kayu, pengharum ruangan, pemutih pakaian, deterjen pakaian, pembasmi serangga, batu baterai, dan lain-lain. B3 merupakan sampah yang mengandung zat beracun, oleh karena itu sampah jenis ini sangat berbahaya dan secara langsung maupun tidak dapat merusak kesehatan dan lingkungan.",),
 ];
 
+//Kelas AppAssets adalah kelas yang berisi string konstan yang mengacu pada path file gambar.
+//Ini dapat digunakan untuk mengakses gambar latar belakang dan gambar foreground dalam aplikasi.
 class AppAssets {
   static final String background = "assets/bg.png";
   static final String forground = "assets/forground.png";

@@ -2,8 +2,11 @@ import 'package:firedart/firedart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+//Nama FormPageController adalah sebuah konvensi yang baik, sesuai dengan tujuannya.
 class FormPageController extends GetxController {
+  //mengelola form
     final GlobalKey<FormState> loginFormKey = GlobalKey<FormState>();
+    // untuk berinteraksi dengan koleksi 'sampah' pada Firestore.
   CollectionReference menucollection = Firestore.instance.collection('sampah');
     late TextEditingController namaC, descC, lokasiC;
 
@@ -15,6 +18,8 @@ class FormPageController extends GetxController {
     lokasiC = TextEditingController();
   }
 
+//untuk melakukan validasi input.
+//Ini baik untuk memastikan bahwa data yang dimasukkan oleh pengguna memenuhi kriteria tertentu.
     String? validateName(String value) {
     if (value.isEmpty) {
       return "nama harus di isi";
@@ -36,6 +41,8 @@ class FormPageController extends GetxController {
     return null;
   }
 
+//mengirimkan data ke Firestore setelah validasi form.
+//Ini juga menggunakan GetX untuk menampilkan dialog konfirmasi setelah operasi berhasil dilakukan.
   Future savedata(String nama, String desc, String lokasi) async {
     if (loginFormKey.currentState!.validate()) {
       loginFormKey.currentState!.save();
