@@ -46,6 +46,7 @@ class LoginPageController extends GetxController {
       }
     }
   }
+}
 
   //TODO: Implement LoginPageController
 
@@ -66,4 +67,3 @@ class LoginPageController extends GetxController {
   // }
 
   // void increment() => count.value++;
-}
