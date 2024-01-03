@@ -57,7 +57,6 @@ class FormPageController extends GetxController {
         textConfirm: "okay",
       );
     }
-
   }
 
   // @override

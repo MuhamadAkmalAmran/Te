@@ -2,10 +2,8 @@ import 'package:final_project_2023/app/data/hive.dart';
 import 'package:final_project_2023/app/data/token_adapter.dart';
 import 'package:firedart/firedart.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
 import 'app/routes/app_pages.dart';
 
 // dua konstanta global (apiKey dan projectId) yang digunakan dalam aplikasi.
